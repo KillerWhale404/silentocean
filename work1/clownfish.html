@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scp-cn-2845/offset/1</title>
+    <style>
+        html,body{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+    
+     .card div {
+        width: 300px;
+        height: 510px;
+        padding: 10px;
+        background-color: rgb(252, 246, 230);
+        border: 5px solid rgb(216, 218, 222);
+        border-radius: 5px;
+        }
+    .card div:hover {
+        transform:scale(1.2);
+        transition: all .5s ease;
+    }
+    .card div {
+        transition: all .5s ease;
+    }
+    .card div h3 {
+        color: brown;
+    }
+    .first {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+    .first:hover::before {
+        content: attr(data-hover1);
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 5px;
+        background-color:aliceblue;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0, 3);
+        z-index: 9999;
+    }
+    .card div a{
+        color: red;
+        font-size: 15px;
+        text-decoration: 0;
+    }
+    .second {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+    .second:hover::before {
+        content: attr(data-hover2);
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 5px;
+        background-color:aliceblue;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0, 3);
+        z-index: 9999;
+    }
+    .third {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+    .third:hover::before {
+        content: attr(data-hover3);
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 5px;
+        background-color:aliceblue;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0, 3);
+        z-index: 9999;
+    }
+    .poem {
+        font-style: italic;
+        font-size: 10px;
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+    .final {
+        color: rgb(252, 246, 230);
+        display:block;
+        margin: auto;
+        text-align: center;
+        font-size: 15px;
+    }
+    .final:hover {
+        animation: text .5s  forwards;
+    }
+    @keyframes text {
+        from {color: rgb(252, 246, 230);}
+        to {color: brown;}
+    }
+    .end-warrper {
+        display: block;
+        width: 100%;
+        height: 45px;
+    }
+    .end {
+        display: block;
+        text-align: center;
+        margin: auto;
+        text-decoration: 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div>
+            <h3>SCP-CN-2845:&nbsp;&nbsp;苦昼短</h3>
+            <p>
+            <span class="first" data-hover1="“飞光飞光，劝尔一杯酒。吾不识青天高，黄地厚。”">
+                 <strong>项目等级:</strong>Euclid    
+            </span>
+            </p>
+            <p>
+            <span class="second" data-hover2="“唯见月寒日暖，来煎人寿。食熊则肥，食蛙则瘦。”">
+                <strong>特殊收容措施:</strong>&nbsp;
+                <a href="http://scp-wiki-cn.wikidot.com/scp-cn-2845">附录1</a>
+            </span>
+            </p>
+            <p>
+            <span class="third" data-hover3="“神君何在，太一安有。天东有若木，下置衔烛龙。”">
+                <strong>描述:</strong>&nbsp;
+                <a href="http://scp-wiki-cn.wikidot.com/scp-cn-2845">附录2</a>
+            </span>
+            </p>
+            <span class="poem">
+                溃痕转荒穹，天凝白夜裂。<br>
+                骨瘦神肤皱，坠日龙血热。<br>
+                股肱起铅兵，火诫闭而灭。<br>
+                昼短闻歌长，来向断颈泄。<br>
+                君不见八百万花夭艳艳，落舌说尽美人血。<br>
+                君不见盲者瞽者鼓盆歌，断弦弹裂心衷铁。<br>
+                人途谁堪立，一径吊影子。<br>
+                失语或噎鸣，有客见红雀。<br>
+            </span>
+            <p>
+                <span class="final">
+                    <strong>
+                        吾将斩龙足，嚼龙肉。使之朝不得回，夜不得伏。<br>
+                        自然老者不死，少者不哭。何为服黄金，吞白玉。<br>
+                        谁似任公子，云中骑碧驴。刘彻茂陵多滞骨，嬴政梓棺费鲍鱼。<br>
+                    </strong>
+                </span>
+                </span>
+            </p>
+            <span class="end-warrper"></span>
+            <span class="end">
+                <a href="http://scp-wiki-cn.wikidot.com/" style="color: black;
+                font-size: 5px;">
+                <strong>控制，收容，保护</strong>
+                </a>
+            </span>
+        </div>
+
+    </div>
+</body>
+</html>

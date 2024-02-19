@@ -1,0 +1,141 @@
+    <!-- 代码有借鉴或使用@Yangfan2016 -->
+    <!-- 接口和js我是真没弄明白 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易云音乐</title>
+    <link href="goose.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="Top">
+		<div class="logo"><img src="R-C1.png" style="width: 80%;"></div>
+        <div class="TopButton"><a href="javascript:void(0);" class="backward"></a></div>
+		<div class="search">
+			<input type="text" placeholder="晴る-ヨルシカ" autofocus="" class="searchInput" />
+		</div>
+	</div>
+    <div class="ListTheLeft">
+        <div class="listContainer">
+			<div class="Basic" style="margin-bottom:10px;">
+				<div class="Container1" style="font-size: 18px;">
+					<p class="recommend">&nbsp;&nbsp;为我推荐</p>
+					<p class="choosethebest">&nbsp;&nbsp;云音乐精选</p>
+					<p class="fm">&nbsp;&nbsp;播客</p>
+					<p class="wandering">&nbsp;&nbsp;私人漫游</p>
+                    <p class="social">&nbsp;&nbsp;社区</p>
+				</div>
+			</div>
+			<div class="Mine" style="margin-bottom:10px;">
+				<div class="Container2" style="font-size: 18px;">
+                    <p class="MyLove">&nbsp;&nbsp;我喜欢的音乐</p>
+                    <p class="recent">&nbsp;&nbsp;最近播放</p>
+                    <p class="MyFM">&nbsp;&nbsp;我的播客</p>
+                    <p class="collect">&nbsp;&nbsp;我的收藏</p>
+                    <p class="download">&nbsp;&nbsp;下载管理</p>
+					<p class="local">&nbsp;&nbsp;本地音乐</p>
+					<p class="cloud">&nbsp;&nbsp;我的音乐云盘</p>
+				</div>
+			</div>
+			<div class="createList" style="margin-bottom: 10px;font-size: 15px;">
+				<p class="title">创建的歌单(0)</p>
+			</div>
+			<div class="collectList" style="margin-bottom:10px;font-size: 15px;border-bottom: 0;">
+				<p class="title">收藏的歌单(0)</p>
+			</div>
+		</div>
+    </div>
+    <div class="Bottom">
+		<div class="player">
+			<div class="last bobutton"></div>
+			<div class="play bobutton"></div>
+			<div class="next bobutton"></div>
+		</div>
+		<div class="timeprogress">
+			<div class="progress">
+				<div class="progressLine">
+				</div>
+				<div class="progress_curbar">
+					<div class="curbar_arc"></div>
+				</div>
+			</div>
+		</div>
+		<div class="BottomOther">
+			<div class="volume">
+				<div class="loud" title="静音"></div>
+				<div class="progress">
+					<div class="progress_curbar">
+						<div class="curbar_arc"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div class="MyLovePage"> 
+		<div class="Maincontainer">
+			<div class="listcontainer">
+				<div class="information">
+					<span class="listpicture">
+						<img src="怀黍离OST_109951169316167603.jpg" style="border-radius:20px;width:15%;height: auto;"/>
+					</span>
+					<span class="details">
+						<div class="name">
+							<span class="listname">我喜欢的音乐</span>
+						</div>
+						<div class="createdetails">
+							<span class="headpicture"><a href="javascript:void(0);"><img src="1707728281965.jpg"/></a></span>
+							<span class="username"><a href="javascript:void(0);" style="text-decoration: none;color: #474747;">于喪家之犬而言不需要安可</a></span>
+							<span class="createtime" style="font-size: 5px;color: #949494;">2016-12-28</span>
+							<span style="font-size: 5px;color: #949494;">创建</span>
+						</div>
+						<div class="function">
+							<span class="Button">&nbsp;&nbsp;播放全部</span>
+							<span class="Button">&nbsp;&nbsp;收藏</span>
+							<span class="Button">&nbsp;&nbsp;下载</span>
+                            <span class="Button" style="padding-left: 3px;">&nbsp;&nbsp;···</span>
+						</div>
+					</span>
+				</div>
+				<div class="sonsheet">
+					<div class="shiftbutton">
+						<label class="shift" for="music" class="active">歌曲</label>
+						<label class="shift" for="comment">评论</label>
+						<label class="shift" for="follower">收藏者</label>
+						<span class="search">
+							<input type="text" placeholder="搜索" class="searchInput" style="float: right;width: 40px;background-color: #fff;color: #949494;border: 1px solid #dadadc;" />
+						</span>
+					</div>
+					<div class="musicList shifttar">
+						<table>
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>标题</th>	
+                                    <th>专辑</th>
+									<th>喜欢</th>
+									<th>时长</th>
+								</tr>
+							</thead>
+							<tbody class="musicContainer">
+								<tr>
+									<td class="index">01</td>
+									<td><p style="font-weight: 600;">Unidentified Flavourful Object</p>
+                                        <p style="color: #949494;font-size: 13px;">Mili</p>
+                                    </td>
+									<td>Miracle Milk</td>
+									<td>&nbsp;</td>
+									<td>04:04</td>
+								</tr>
+							</tbody>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,302 @@
+html,body{width:100%;height:100%;overflow:hidden;}
+html{font-size:20px;}
+body{
+	min-width:1024px;
+	font-size:0.7rem;
+	font-family:"Microsoft YaHei";
+	position:relative;
+    background-color:#fafafa;
+}
+table,td,th{
+	border-collapse:collapse;
+}
+.Top{
+	position:fixed;
+	top:0;left:0;
+	width:100%;
+	height:60px;
+	padding:0 15px;
+	box-sizing:border-box;
+	background-color:#c52f30;
+	z-index:9;
+}
+.Top>div{
+	float:left;
+    position:relative;
+    top:50%;left:0;
+    -webkit-transform:translate(0,-50%);
+    transform:translate(0,-50%);
+}
+.Top>.logo{
+    width:15%;
+}
+.backward{
+    margin:0 20px 0 5px;
+    padding:3px 10px;
+	border:1px solid #982b26;
+	color:#ffefe4;
+	border-radius:5px;
+}
+.search>.searchInput{
+	display:inline-block;
+	border:none;
+	outline:none;
+	width:160px;
+	padding:5px 30px 5px 10px;
+	border-radius:10px;
+	background-color:rgba(50, 50, 50, 0.5);
+	color:#ededed;
+}
+.Bottom{
+	position:fixed;
+	bottom:0;left:0;
+	width:100%;
+	height:60px;
+	border-top:1px solid #dadadc;
+	background-color:#f6f6f8;
+	z-index:9;
+}
+.ListTheLeft{
+	position:absolute;
+	top:20px;left:0;
+	width:220px;
+	height:100%;
+	padding:60px 20px 0 0;
+	border-right:1px solid #dadadc;
+	background-color:#f5f5f7;
+	box-sizing:border-box;
+}
+.ListTheLeft>.listContainer{
+	height:100%;
+    padding-left: 20px;
+}
+.ListTheLeft>.listContainer>div{
+    border-bottom: #ccc solid 1px;
+}
+
+.player{
+	float:left;
+	width:220px;
+	height:100%;
+	text-align:center;
+}
+.player>.bobutton{
+	display:inline-block;
+	width:40px;
+	height:40px;
+	margin-left:16px;
+	border-radius:50%;
+	position:relative;
+	top:50%;left:0;
+    -webkit-transform:translate(0,-50%);
+	transform:translate(0,-50%);
+	background-color:#c52f30;
+	color:#f7f7f7;
+	cursor:pointer;
+}
+.player>.bobutton.play{
+	width:44px;
+	height:44px;
+}
+.BottomOther{
+	float:right;
+	height:100%;
+}
+.BottomOther>.volume{
+	position:relative;
+	top:50%;left:0;
+	margin:0 15px;
+	-webkit-transform:translate(0,-50%);
+	transform:translate(0,-50%);
+}
+.BottomOther>.volume>div{
+	display:inline-block;
+	margin:0 5px;
+}
+.BottomOther>.volume>.progress,
+.timeprogress>.progress{
+	position:relative;
+	top:50%;left:0;
+	-webkit-transform:translate(0,-50%);
+	transform:translate(0,-50%);
+	width:150px;
+	height:6px;
+	border-radius:5px;
+	background-color:#cbcfd1;
+}
+.volume>.progress>.progress_curbar,
+.timeprogress>.progress>.progress_curbar{
+	position:absolute;
+	top:0;left:0;
+	width:0;
+	height:100%;
+	border-radius:5px;
+	background-color:#e73d3d;
+}
+.volume>.progress>.progress_curbar>.curbar_arc,
+.timeprogress>.progress>.progress_curbar>.curbar_arc{
+	position:absolute;
+	top:50%;left:100%;
+	width:14px;
+	height:14px;
+	border-radius:50%;
+	box-shadow:0 0 2px #bbb;
+	-webkit-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+	background-color:#fff;
+	cursor:pointer;
+}
+.volume>.progress>.progress_curbar>.curbar_arc:after,
+.playerbar_timeprogress>.progress>.progress_curbar>.curbar_arc:after{
+	content:"";
+	position:absolute;
+	top:50%;left:50%;
+	-webkit-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+	width:6px;
+	height:6px;
+	border-radius:50%;
+	background-color:#c52f30;
+}
+.volume>.progress>.progress_curbar>.curbar_arc:hover,
+.timeprogress>.progress>.progress_curbar>.curbar_arc:hover{
+	box-shadow:0 0 5px rgba(0,0,0,0.3);
+}
+
+.volume>.progress>.progress_curbar>.curbar_arc{
+	visibility:hidden;
+}
+.volume>.progress:hover>.progress_curbar>.curbar_arc{
+	visibility:visible;
+}
+.playerbar_timeprogress>.progress>.progress_cache{
+	position:absolute;
+	top:0;left:0;
+	width:0;
+	height:100%;
+	background-color:#ababab;
+	-webkit-transition:width ease 0.5s;
+	transition:width ease 0.5s;
+}
+.timeprogress{
+	float:left;
+	width:calc(100% - 220px - 150px - 150px);
+	height:100%;
+}
+.timeprogress>.progress{
+	width:85%;
+	margin:0 auto;
+}
+.timeprogress>.progress>.time{
+	position:absolute;
+	top:50%;
+	-webkit-transform:translate(0,-50%);
+	transform:translate(0,-50%);
+}
+.MyLovePage{
+	padding:60px 0 60px 220px;
+	height:100%;
+	box-sizing:border-box;
+}
+.listcontainer>.information>.listpicure{
+	float:left;
+	width:200px;
+	margin-right:40px;
+	position:relative;
+}
+.listcontainer>.information{
+    padding:20px 40px;
+	margin-bottom:30px;
+}
+.MyLovePage>.Maincontainer{
+    height:100%;
+	overflow-y:scroll;
+}
+.listcontainer{
+	width:100%;
+	overflow:hidden;
+}
+.listcontainer>.information>.details{
+    float: right;
+	width:calc(100% - 200px - 40px);
+	position:relative;
+}
+.listcontainer>.information>.details>.name>.listname{
+	margin:0 5px;
+	font-size: 30px;
+    font-weight:800;
+}
+.listcontainer>.information>.details>.createdetails{
+	margin:15px 0;
+	padding-left:50px;
+	position:relative;
+}
+.listcontainer>.information>.details>.createdetails>span{
+	margin:0 5px;
+}
+.listcontainer>.information>.details>.createdetails>.headpicture{
+	display:inline-block;
+	position:absolute;
+	top:70%;left:0;
+	width:30px;
+	height:30px;
+	border:1px solid #dadadc;
+	border-radius:50%;
+	-webkit-transform:translate(0,-50%);
+	transform:translate(0,-50%);
+	overflow:hidden;
+}
+.listcontainer>.information>.details>.createdetails>.headpicture>a>img{
+	width:100%;
+	height:auto;
+}
+.listcontainer>.information>.details>.function{
+    padding-top: 90px;
+}
+.listcontainer>.information>.details>.function>.Button{
+	display:inline-block;
+	margin:0 5px;
+    font-size: 15px;
+	padding:5px 10px;
+	border:1px solid #dadadc;
+	border-radius:5px;
+	cursor:pointer;
+    margin-right:0;
+}
+.listcontainer>.information>.details>.function>.Button:hover{
+	background-color:#f5f5f7;
+}
+.listcontainer>.sonsheet>.shiftbutton{
+	padding:0 40px;
+	border-bottom:1px solid #c52f30;
+}
+.listcontainer>.sonsheet>.shiftbutton>label{
+    display: inline-block;
+    font-size: 15px;
+    padding:0.5em 2em;
+	margin:0 3px;
+	border-bottom:none;
+	cursor:pointer;
+}
+.listcontainer>.sonsheet>input{
+	position:fixed;
+	top:0;left:-9999px;
+}
+.listcontainer>.sonsheet>input:checked + .shifttar{
+	display:block;
+}
+.musicList>table{
+	width:100%;
+	text-align:left;
+}
+.musicList>table td,
+.musicList>table th{
+	padding-left:15px;
+	max-width:200px;
+	height:2rem;
+	font-weight:lighter;
+}
+.musicList>table th{
+	border-bottom:1px solid #e0e0e0;
+	box-sizing:border-box;
+}

@@ -8,6 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>网易云音乐</title>
     <link href="goose.css" rel="stylesheet" type="text/css"/>
+	<script>
+        window.onload = function () {
+            var tab_li = document.getElementsByTagName(".shift");
+            var content = document.getElementById(".sonsheet");
+            var content_div = content.getElementsByTagName(".shifttar");
+            for(var i= 0;i<tab_li.length;i++){
+                     tab_li[i].index = i;
+                tab_li[i].onmouseover = function () {
+                    for(var j=0;j<tab_li.length;j++){
+                        tab_li[j].classList.remove("active");
+                        content_div[j].setAttribute("class","hidden");
+                    }
+                    this.setAttribute("class","active");
+                     content_div[this.index].classList.remove("hidden");
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="Top">
@@ -20,29 +38,29 @@
     <div class="ListTheLeft">
         <div class="listContainer">
 			<div class="Basic" style="margin-bottom:10px;">
-				<div class="Container1" style="font-size: 18px;">
-					<p class="recommend">&nbsp;&nbsp;为我推荐</p>
-					<p class="choosethebest">&nbsp;&nbsp;云音乐精选</p>
-					<p class="fm">&nbsp;&nbsp;播客</p>
-					<p class="wandering">&nbsp;&nbsp;私人漫游</p>
-                    <p class="social">&nbsp;&nbsp;社区</p>
+				<div class="Container">
+					<p class="recommend choi">&nbsp;&nbsp;为我推荐</p>
+					<p class="choosethebest choi">&nbsp;&nbsp;云音乐精选</p>
+					<p class="fm choi">&nbsp;&nbsp;播客</p>
+					<p class="wandering choi">&nbsp;&nbsp;私人漫游</p>
+                    <p class="social choi">&nbsp;&nbsp;社区</p>
 				</div>
 			</div>
 			<div class="Mine" style="margin-bottom:10px;">
-				<div class="Container2" style="font-size: 18px;">
-                    <p class="MyLove">&nbsp;&nbsp;我喜欢的音乐</p>
-                    <p class="recent">&nbsp;&nbsp;最近播放</p>
-                    <p class="MyFM">&nbsp;&nbsp;我的播客</p>
-                    <p class="collect">&nbsp;&nbsp;我的收藏</p>
-                    <p class="download">&nbsp;&nbsp;下载管理</p>
-					<p class="local">&nbsp;&nbsp;本地音乐</p>
-					<p class="cloud">&nbsp;&nbsp;我的音乐云盘</p>
+				<div class="Container">
+                    <p class="MyLove choi active">&nbsp;&nbsp;我喜欢的音乐</p>
+                    <p class="recent choi">&nbsp;&nbsp;最近播放</p>
+                    <p class="MyFM choi">&nbsp;&nbsp;我的播客</p>
+                    <p class="collect choi">&nbsp;&nbsp;我的收藏</p>
+                    <p class="download choi">&nbsp;&nbsp;下载管理</p>
+					<p class="local choi">&nbsp;&nbsp;本地音乐</p>
+					<p class="cloud choi">&nbsp;&nbsp;我的音乐云盘</p>
 				</div>
 			</div>
-			<div class="createList" style="margin-bottom: 10px;font-size: 15px;">
+			<div class="createList" style="margin-bottom: 10px;">
 				<p class="title">创建的歌单(0)</p>
 			</div>
-			<div class="collectList" style="margin-bottom:10px;font-size: 15px;border-bottom: 0;">
+			<div class="collectList" style="margin-bottom:10px;border-bottom: 0;">
 				<p class="title">收藏的歌单(0)</p>
 			</div>
 		</div>
@@ -101,14 +119,15 @@
 				</div>
 				<div class="sonsheet">
 					<div class="shiftbutton">
-						<label class="shift" for="music" class="active">歌曲</label>
+						<label class="shift active" for="music">歌曲</label>
 						<label class="shift" for="comment">评论</label>
 						<label class="shift" for="follower">收藏者</label>
 						<span class="search">
 							<input type="text" placeholder="搜索" class="searchInput" style="float: right;width: 40px;background-color: #fff;color: #949494;border: 1px solid #dadadc;" />
 						</span>
 					</div>
-					<div class="musicList shifttar">
+					<input type="radio" id="music" name="tablist" checked="" />
+					<div class="musicList shifttar show">
 						<table>
 							<thead>
 								<tr>
@@ -133,9 +152,25 @@
 							</tfoot>
 						</table>
 					</div>
+					<input type="radio" id="comment" name="tablist" />
+					<div class="shifttar commentlist hidden">
+						<div class="commentbox clearfix">
+							<textarea name="" id="" cols="30" rows="10" maxlength="140"></textarea>
+							<span class="wordslen">140</span>
+							<a href="javascript:void(0);" class="btn comment">评论</a>
+						</div>
+						<div class="commenttable">
+							<p style="color:#ccc;margin: auto;text-align: center;">-- 暂无评论 --</p>
+						</div>
+					</div>
+					<input type="radio" id="follower" name="tablist" />
+					<div class="shifttar followerlist hidden">
+						<p style="color:#ccc; margin: auto;text-align: center;">-- 空空如也 --</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	
 </body>
 </html>
